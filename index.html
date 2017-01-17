@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz App</title>
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+	
+	<div class='container'>
+		<form class='intro'>
+			<h1>Conversion Quiz</h1>
+			<p>You need to answer 10 questions converting measurements</p>
+			<p>GOOD LUCK!</p>
+			<button type="submit" class="start">Start</button>
+		</form>
+	
+		<form class='questions hide'>
+			<fieldset name='Q1-of-10'>
+				<legend>Question 1 of 10</legend>
+				<P>How many pints in a gallon?</P>
+					<input type="radio" name="Q1" value="8"> 2<br>
+					<input type="radio" name="Q1" value="8"> 4<br>
+					<input type="radio" name="Q2" value="8"> 6<br>
+					<input type="radio" name="Q1" value="8"> 8<br>
+			</fieldset>
+		</form>
+
+		<form class='questions hide'>
+			<fieldset name='Q2-of-10'>
+				<legend>Question 2 of 10</legend>
+				<p>How many ounces in a pound?</p>
+					<input type="radio" name="Q2" name="16"> 4<br>
+					<input type="radio" name="Q2" name="16"> 8<br>
+					<input type="radio" name="Q2" name="16"> 16<br>
+					<input type="radio" name="Q2" name="16"> 24<br>
+			</fieldset>
+			
+		</form>
+
+		<form class='questions hide'>
+			<fieldset name='Q3-of-10'>
+				<legend>Question 3 of 10</legend>
+				<p>How many ounces in a cup?</p>
+					<input type="radio" name="Q3" value="8"> 6<br>
+					<input type="radio" name="Q3" value="8"> 8<br>
+					<input type="radio" name="Q3" value="8"> 12<br>
+					<input type="radio" name="Q3" value="8"> 16<br>
+			</fieldset>
+		</form>
+
+		<form class='questions hide'>
+			<fieldset name='Q4-of-10'>
+				<legend>Question 4 of 10</legend>
+				<p>How many feet in a mile?</p>
+					<input type="radio" name="Q4" value="5280"> 5280<br>
+					<input type="radio" name="Q4" value="5280"> 6280<br>
+					<input type="radio" name="Q4" value="5280"> 5480<br>
+					<input type="radio" name="Q4" value="5280"> 6480<br>
+			</fieldset>
+		</form>
+
+		<form class='questions hide'>
+			<fieldset name='Q5-of-10'>
+				<legend>Question 5 of 10</legend>
+				<p>How many seconds in an hour?</p>
+					<input type="radio" name="Q5" value="3600"> 360<br>
+					<input type="radio" name="Q5" value="3600"> 2,160<br>
+					<input type="radio" name="Q5" value="3600"> 3,600<br>
+					<input type="radio" name="Q5" value="3600"> 21,600<br>
+			</fieldset>
+		</form>
+
+		<form class='questions hide'>
+			<fieldset name='Q6-of-10'>
+				<legend>Question 6 of 10</legend>
+				<p>How many feet in a yard?</p>
+					<input type="radio" name="Q6" value="3"> 6<br>
+					<input type="radio" name="Q6" value="3"> 5<br>
+					<input type="radio" name="Q6" value="3"> 4<br>
+					<input type="radio" name="Q6" value="3"> 3<br>
+			</fieldset>
+		</form>
+
+		<form class='questions hide'>
+			<fieldset name='Q7-of-10'>
+				<legend>Question 7 of 10</legend>
+				<p>How many mile in a kilometer?</p>
+					<input type="radio" name="Q7" value="0.6"> 1<br>
+					<input type="radio" name="Q7" value="0.6"> 0.6<br>
+					<input type="radio" name="Q7" value="0.6"> 1.2<br>
+					<input type="radio" name="Q7" value="0.6"> 1.8<br>
+			</fieldset>
+		</form>
+
+		<form class='questions hide'>
+			<fieldset name='Q8-of-10'>
+				<legend>Question 8 of 10</legend>
+				<p>How many grams in a kilogram?</p>
+					<input type="radio" name="Q8" value="1000"> 0.1<br>
+					<input type="radio" name="Q8" value="1000"> 10<br>
+					<input type="radio" name="Q8" value="1000"> 100<br>
+					<input type="radio" name="Q8" value="1000"> 1000<br>
+			</fieldset>
+		</form>
+
+		<form class='questions hide'>
+			<fieldset name='Q9-of-10'>
+				<legend>Question 9 of 10</legend>
+				<p>How many inches in a yard?</p>
+					<input type="radio" name="Q9" value="36"> 28<br>
+					<input type="radio" name="Q9" value="36"> 26<br>
+					<input type="radio" name="Q9" value="36"> 36<br>
+					<input type="radio" name="Q9" value="36"> 32<br>
+			</fieldset>
+		</form>
+
+		<form class='questions hide'>
+			<fieldset name='Q10-of-10'>
+				<legend>Question 10 of 10</legend>
+				<p>How many cups in a quart?</p>
+					<input type="radio" name="Q10" value="4"> 2<br>
+					<input type="radio" name="Q10" value="4"> 4<br>
+					<input type="radio" name="Q10" value="4"> 6<br>
+					<input type="radio" name="Q10" value="4"> 8<br>
+			</fieldset>
+		</form>
+
+	</div>
+
+<!--	<section class="Nav-questions"></section>  -->
+	<nav class="question-nav hide">
+		<button type="reset" value="Reset">Reset</button>
+		<button type="submit" value="Submit">Next</button>
+	</nav>
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script type="app.js"></script>
+
+</body>
+</html>
