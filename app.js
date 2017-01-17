@@ -1,13 +1,36 @@
 
 $(document).ready(function() {
+	var numForm = 1;
 	$('.intro').submit(function(event){
 		event.preventDefault();
 		$(this).addClass('hide');
-		$('form:eq(1)').removeClass('hide');
-	
-		
+		$('.question-nav').removeClass('hide');
+		$('form:eq(1)').removeClass('hide');		
 	});
+
+	$('.next').click(function(event){
+		$('form:eq('+numForm+')').addClass('hide');
+		numForm++;
+		$('form:eq('+numForm+')').removeClass('hide');
+
+	})
 });
+
+
+/* pseudo code
+
+check answer if right/wrong and count correct answer
+
+var correct = 0;
+if input == value then correct
+	correct++
+	alert('Good job! You got the correct answer.');
+else 
+	alert('Nice try but that is not the correct answer.');
+*/
+
+
+
 
 /*
 	$('form:first').submit(function() {
@@ -19,7 +42,7 @@ $(document).ready(function() {
 
 /*
 // ALERT WHEN NEXT BUTTON IS CLICKED
-alert('Nice try but that is not the correct answer.');
+
 alert('Good job! You got the correct answer.');
 
 
