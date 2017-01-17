@@ -1,8 +1,11 @@
 
 $(document).ready(function() {
-	$('.start').click(function(){
-		$('.intro').addClass('hide');
-		alert('it is working for now');
+	$('.intro').submit(function(event){
+		event.preventDefault();
+		$(this).addClass('hide');
+		$('form:eq(1)').removeClass('hide');
+	
+		
 	});
 });
 
