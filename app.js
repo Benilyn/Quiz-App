@@ -1,6 +1,11 @@
 
 $(document).ready(function() {
-	var numForm = 1;
+	
+	var formNum = 1;
+	var correctAnswer = 0;
+	var inputValue = [];
+	
+
 	$('.intro').submit(function(event){
 		event.preventDefault();
 		$(this).addClass('hide');
@@ -9,46 +14,54 @@ $(document).ready(function() {
 	});
 
 	$('.next').click(function(event){
-		$('form:eq('+numForm+')').addClass('hide');
-		numForm++;
-		$('form:eq('+numForm+')').removeClass('hide');
+		
+		inputValue[formNum] = {
+			choice: $('form:eq('+formNum+')' + ' input:checked').val(),
+			answer: $('form:eq('+formNum+')').data('answer'),
+			
+		};
+		
+		
 
-	})
+		if ($('form:eq('+formNum+') input:checked').length === 0) {
+			alert('You must choose an answer before proceeding to the next question.');
+		}
+		else {
+			if (inputValue[formNum].answer == inputValue[formNum].choice) {
+	        	correctAnswer++;
+	           	alert('Good job! You got the correct answer.');
+	        }
+
+	        else {
+	            alert('Nice try but that is not the correct answer.');
+	        }  
+		
+	    if (formNum === 10) {
+	    	$('form:eq(10)').addClass('hide');
+	    	$('button').remove();
+	    	$('.result').append('You got ' + correctAnswer + ' out of 10.');
+	    	$('.thank-you').append('Thank you for taking the test.');
+	    }    
+
+		$('form:eq('+formNum+')').addClass('hide');
+		formNum++;
+		$('form:eq('+formNum+')').removeClass('hide');
+		
+		
+
+		}
+
+         
+	        
+		
+
+	});	
 });
-
-
-/* pseudo code
-
-check answer if right/wrong and count correct answer
-
-var correct = 0;
-if input == value then correct
-	correct++
-	alert('Good job! You got the correct answer.');
-else 
-	alert('Nice try but that is not the correct answer.');
-*/
+	
 
 
 
 
-/*
-	$('form:first').submit(function() {
-		$(this).addClass('hide');
-		alert('this is working');
-	});
-  */      
-    
-
-/*
-// ALERT WHEN NEXT BUTTON IS CLICKED
-
-alert('Good job! You got the correct answer.');
 
 
-// Selects next sibling
-$(event.target).next('form');
-
-// Counter for correct answer
-var correctAnswer = 0;
-*/
+   
