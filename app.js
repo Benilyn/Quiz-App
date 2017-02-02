@@ -17,12 +17,9 @@ $(document).ready(function() {
 		
 		inputValue[formNum] = {
 			choice: $('form:eq('+formNum+')' + ' input:checked').val(),
-			answer: $('form:eq('+formNum+')').data('answer'),
-			
+			answer: $('form:eq('+formNum+')').data('answer'),	
 		};
 		
-		
-
 		if ($('form:eq('+formNum+') input:checked').length === 0) {
 			alert('You must choose an answer before proceeding to the next question.');
 		}
@@ -46,14 +43,7 @@ $(document).ready(function() {
 		$('form:eq('+formNum+')').addClass('hide');
 		formNum++;
 		$('form:eq('+formNum+')').removeClass('hide');
-		
-		
-
 		}
-
-         
-	        
-		
 
 	});	
 });
